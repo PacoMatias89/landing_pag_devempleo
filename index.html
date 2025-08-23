@@ -51,64 +51,16 @@
             <p>¿Quieres utilizar DevEmpleo en tu empresa, academia o equipo de reclutamiento? Rellena el siguiente
                 formulario y te contactaremos para activar tu acceso.</p>
 
-            <form id="contactForm" class="form-card">
-                <div class="form-group">
-                    <label for="nombre">Nombre completo</label>
-                    <input type="text" id="nombre" name="nombre" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="empresa">Empresa / Academia</label>
-                    <input type="text" id="empresa" name="empresa">
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Correo electrónico</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="mensaje">¿Qué necesitas de DevEmpleo?</label>
-                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-                </div>
-
-                <button class="cta" type="submit">Solicitar acceso</button>
-                <p id="respuesta" class="respuesta"></p>
-            </form>
+            <!-- Formulario embebido de Google Forms -->
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLScOSPpOUlgxqc6ggfzyHM3YHYiWhXMve1hfF1AQF3qV_O26Gw/viewform?usp=header"
+                width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
         </section>
     </main>
 
     <footer>
         © 2025 DevEmpleo · Creado por Paco desde Málaga · contacto@devempleo.es
     </footer>
-
-    <script>
-        document.getElementById("contactForm").addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            const formData = new URLSearchParams();
-            formData.append("nombre", document.getElementById("nombre").value);
-            formData.append("empresa", document.getElementById("empresa").value);
-            formData.append("email", document.getElementById("email").value);
-            formData.append("mensaje", document.getElementById("mensaje").value);
-
-            fetch("https://script.google.com/macros/s/AKfycbwAoNNUXwSVEEcaxOVjRjoHdMbXHP2QktCSheV14n9LmNcFiuVXPeRKE3XgLDL0UY18/exec", {
-                method: "POST",
-                body: formData
-            })
-                .then(res => res.text())
-                .then(text => {
-                    document.getElementById("respuesta").innerText = "✅ ¡Solicitud enviada correctamente!";
-                    document.getElementById("contactForm").reset();
-                })
-                .catch(err => {
-                    document.getElementById("respuesta").innerText = "❌ Error al enviar la solicitud";
-                    console.error(err);
-                });
-        });
-    </script>
-
-
 
 </body>
 
