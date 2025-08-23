@@ -99,7 +99,7 @@
                 .then(res => res.text())
                 .then(text => {
                     document.getElementById("respuesta").innerText = "✅ ¡Solicitud enviada correctamente!";
-                    document.getElementById("contactForm").reset();
+                    document.getElementById("formulario").reset();
                 })
                 .catch(err => {
                     document.getElementById("respuesta").innerText = "❌ Error al enviar la solicitud";
