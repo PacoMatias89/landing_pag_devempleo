@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
@@ -52,7 +51,7 @@
             <p>¿Quieres utilizar DevEmpleo en tu empresa, academia o equipo de reclutamiento? Rellena el siguiente
                 formulario y te contactaremos para activar tu acceso.</p>
 
-            <form id="contactForm">
+            <form id="contactForm" class="form-card">
                 <div class="form-group">
                     <label for="nombre">Nombre completo</label>
                     <input type="text" id="nombre" name="nombre" required>
@@ -77,7 +76,6 @@
                 <p id="respuesta" class="respuesta"></p>
             </form>
         </section>
-
     </main>
 
     <footer>
@@ -97,6 +95,9 @@
 
             fetch("https://script.google.com/macros/s/AKfycbwAoNNUXwSVEEcaxOVjRjoHdMbXHP2QktCSheV14n9LmNcFiuVXPeRKE3XgLDL0UY18/exec", {
                 method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
                 body: JSON.stringify(data)
             })
                 .then(res => res.text())
