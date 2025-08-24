@@ -88,14 +88,23 @@
         © 2025 DevEmpleo · Hecho con 💻 desde Málaga · contacto@devempleo.es
     </footer>
 
-    <!-- Script para redirección post-envío -->
+    <!-- Script para mostrar mensaje post-envío -->
     <script>
         const form = document.getElementById('form-acceso');
 
         form.addEventListener('submit', function () {
-            // Redirige tras un pequeño retraso para asegurar que Formspree procese el envío
+            // Permite que Formspree procese el envío
             setTimeout(() => {
-                window.location.href = 'thankyou.html';
+                // Oculta el formulario
+                form.style.display = 'none';
+
+                // Crea y muestra el mensaje de confirmación
+                const msg = document.createElement('p');
+                msg.textContent = "✅ Si has solicitado acceso profesional, revisa tu bandeja de entrada para confirmar tu email.";
+                msg.style.fontWeight = 'bold';
+                msg.style.fontSize = '1.1em';
+                msg.style.marginTop = '1rem';
+                form.parentNode.appendChild(msg);
             }, 500);
         });
     </script>
