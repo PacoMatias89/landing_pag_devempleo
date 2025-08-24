@@ -48,7 +48,7 @@
             <h2>Solicita tu acceso</h2>
             <p>Completa este formulario y te responderemos en menos de 24 horas.</p>
 
-            <form action="https://formspree.io/f/xovnalbe" method="POST" class="lead-form">
+            <form id="form-acceso" action="https://formspree.io/f/xovnalbe" method="POST" class="lead-form">
                 <div class="form-group">
                     <label for="empresa">Nombre de la empresa</label>
                     <input type="text" id="empresa" name="empresa" placeholder="Ej. DevAcademy" required>
@@ -89,7 +89,7 @@
     </footer>
 </body>
 <script>
-    const form = document.getElementById('formulario');
+    const form = document.getElementById('form-acceso');
 
     form.addEventListener('submit', function (e) {
         e.preventDefault(); // Evita el envío automático
