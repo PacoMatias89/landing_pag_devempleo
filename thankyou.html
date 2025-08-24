@@ -4,32 +4,32 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>¡Gracias! | devempleo</title>
+    <title>¡Gracias! | DevEmpleo</title>
     <meta name="robots" content="noindex, nofollow" />
-    <!-- Enlace a tu hoja de estilos principal -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <header>
+    <header class="thankyou-header">
         <h1>¡Gracias! Hemos recibido tu solicitud</h1>
         <p>Tu envío se ha procesado correctamente. Te contactaremos en breve.</p>
     </header>
 
     <main>
-        <section class="grid">
-            <div class="panel">
+        <section class="thankyou-grid">
+            <div class="thankyou-card">
                 <h2>Empresas y equipos (B2B)</h2>
                 <p>Si has solicitado acceso profesional, revisa tu bandeja de entrada para confirmar tu email.</p>
-                <a class="cta" href="/">Volver al inicio</a>
-                <a class="cta" href="/pricing.html">Ver planes</a>
+                <div class="cta-group">
+                    <a class="cta" href="/">Volver al inicio</a>
+                    <a class="cta secondary" href="/pricing.html">Ver planes</a>
+                </div>
             </div>
 
-            <div class="panel">
+            <div class="thankyou-card">
                 <h2>Premium individual</h2>
                 <p>Activa el plan Premium y accede a todas las funcionalidades al instante.</p>
-                <!-- Sustituye por tu enlace de Stripe -->
                 <a class="cta secondary" href="https://buy.stripe.com/REEMPLAZA_CON_TU_LINK">Hazte Premium</a>
             </div>
         </section>

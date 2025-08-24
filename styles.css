@@ -45,6 +45,7 @@ header {
   text-align: center;
   padding: 3rem 1.5rem;
   margin-bottom: 1rem;
+  border-radius: var(--radio-borde);
 }
 
 header h1 {
@@ -62,6 +63,7 @@ header p {
 }
 
 .cta {
+  display: inline-block;
   background-color: var(--color-secundario);
   color: white;
   padding: 0.9rem 1.8rem;
@@ -70,11 +72,14 @@ header p {
   font-size: 1rem;
   cursor: pointer;
   margin: 0.5rem;
-  transition: background-color 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .cta:hover {
   background-color: #005fa3;
+  transform: translateY(-2px);
 }
 
 .cta.secondary {
@@ -120,6 +125,7 @@ ul li::before {
   display: inline-block;
   width: 1rem;
 }
+
 /* ===== Formulario para solicitar demo ===== */
 .lead-form {
   display: flex;
@@ -144,11 +150,13 @@ ul li::before {
   border: 1px solid var(--color-borde);
   border-radius: var(--radio-borde);
   font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: var(--color-secundario);
+  box-shadow: 0 0 0 3px rgba(0, 120, 212, 0.2);
   outline: none;
 }
 
@@ -156,7 +164,6 @@ textarea {
   resize: vertical;
   min-height: 100px;
 }
-
 
 /* ===== Navegación ===== */
 .main-nav {
@@ -174,7 +181,7 @@ textarea {
 .nav-logo {
   display: flex;
   align-items: center;
-  gap: 12px; /* separación entre logo y texto */
+  gap: 12px;
   text-decoration: none;
   color: var(--color-principal);
   font-weight: 700;
@@ -182,7 +189,7 @@ textarea {
 }
 
 .nav-logo svg {
-  width: 50px;   /* tamaño del logo */
+  width: 50px;
   height: 50px;
   flex-shrink: 0;
 }
@@ -201,7 +208,6 @@ textarea {
   color: #1E90FF; 
 }
 
-/* ===== Enlaces de navegación ===== */
 .nav-links {
   list-style: none;
   display: flex;
@@ -243,7 +249,7 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .pricing-card.featured {
@@ -314,6 +320,71 @@ footer {
   margin-top: 3rem;
 }
 
+/* ===== Página de Gracias ===== */
+.thankyou-header {
+    background: linear-gradient(135deg, var(--color-principal), var(--color-secundario));
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+    border-radius: var(--radio-borde);
+    margin: 2rem auto;
+    max-width: 900px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.thankyou-header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.thankyou-header p {
+    font-size: 1.1rem;
+    opacity: 0.95;
+}
+
+.thankyou-grid {
+    display: flex;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 2rem auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.thankyou-card {
+    background-color: var(--color-fondo-seccion);
+    padding: 2rem;
+    border-radius: var(--radio-borde);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    flex: 1 1 300px;
+    max-width: 400px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.thankyou-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.thankyou-card h2 {
+    font-size: 1.6rem;
+    color: var(--color-principal);
+    margin-bottom: 1rem;
+}
+
+.thankyou-card p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.thankyou-card .cta-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 /* ===== Responsividad ===== */
 @media (max-width: 768px) {
   header h1 {
@@ -356,7 +427,6 @@ footer {
   }
 
   .cta-group {
-    display: flex;
     flex-direction: column;
     align-items: center;
   }
@@ -368,6 +438,11 @@ footer {
 
   iframe {
     height: 700px;
+  }
+
+  .thankyou-grid {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
