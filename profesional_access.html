@@ -48,9 +48,7 @@
             <h2>Solicita tu acceso</h2>
             <p>Completa este formulario y te responderemos en menos de 24 horas.</p>
 
-            <!-- Aquí agregamos data-redirect para que Formspree redirija a thankyou.html -->
-            <form id="form-acceso" action="https://formspree.io/f/xovnalbe" method="POST" class="lead-form"
-                data-redirect="thankyou.html">
+            <form id="form-acceso" action="https://formspree.io/f/xovnalbe" method="POST" class="lead-form">
                 <div class="form-group">
                     <label for="empresa">Nombre de la empresa</label>
                     <input type="text" id="empresa" name="empresa" placeholder="Ej. DevAcademy" required>
@@ -90,6 +88,26 @@
         © 2025 DevEmpleo · Hecho con 💻 desde Málaga · contacto@devempleo.es
     </footer>
 
+    <!-- Script para mostrar mensaje post-envío -->
+    <script>
+        const form = document.getElementById('form-acceso');
+
+        form.addEventListener('submit', function () {
+            // Permite que Formspree procese el envío
+            setTimeout(() => {
+                // Oculta el formulario
+                form.style.display = 'none';
+
+                // Crea y muestra el mensaje de confirmación
+                const msg = document.createElement('p');
+                msg.textContent = "✅ Si has solicitado acceso profesional, revisa tu bandeja de entrada para confirmar tu email.";
+                msg.style.fontWeight = 'bold';
+                msg.style.fontSize = '1.1em';
+                msg.style.marginTop = '1rem';
+                form.parentNode.appendChild(msg);
+            }, 500);
+        });
+    </script>
 </body>
 
 </html>
