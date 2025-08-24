@@ -2,67 +2,74 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DevEmpleo | Radar de ofertas IT en España</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DevEmpleo · Encuentra tu próximo trabajo IT en España</title>
+    <meta name="description"
+        content="DevEmpleo recopila miles de ofertas tecnológicas y las presenta en un dashboard interactivo con filtros y estadísticas." />
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/favicon.ico?v=1" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 
 <body>
+    <!-- Navegación -->
+    <nav class="main-nav">
+        <a href="index.html" class="nav-logo">
+            <img src="assets/logo.svg" alt="DevEmpleo Logo" />
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pricing.html">Planes & Precios</a></li>
+        </ul>
+    </nav>
 
+    <!-- Hero -->
     <header>
-        <img src="assets/logo.svg" alt="DevEmpleo Logo" class="logo">
-        <h1>DevEmpleo</h1>
-        <p>Tu radar de ofertas IT en España. Actualizado. Filtrado. Real.</p>
-        <a href="https://devempleo.streamlit.app/"><button class="cta">Explora las ofertas</button></a>
+        <h1>Más de 11.000 ofertas analizadas. Cada día. Sin ruido.</h1>
+        <p>Encuentra tu próximo trabajo IT en España con filtros por stack, ubicación y modalidad.</p>
+        <div class="cta-group">
+            <a href="https://devempleo.streamlit.app/">
+                <button class="cta">Acceder al dashboard</button>
+            </a>
+            <a href="pricing.html">
+                <button class="cta secondary">Ver planes y precios</button>
+            </a>
+        </div>
     </header>
 
     <main>
-        <section>
+        <section class="card">
             <h2>¿Qué es DevEmpleo?</h2>
-            <p>Recogemos más de <strong>5.000 ofertas tecnológicas</strong> cada día desde múltiples fuentes como
-                Jooble, Adzuna, Tecnoempleo y más. Las organizamos, filtramos y presentamos en un dashboard interactivo
-                para que encuentres lo que realmente importa.</p>
+            <p>DevEmpleo analiza miles de ofertas IT en España y te muestra solo lo que importa. Filtrado por stack,
+                ubicación, modalidad y más.</p>
         </section>
 
-        <section>
+        <section class="card">
             <h2>¿Para quién es?</h2>
             <ul>
                 <li>👨‍💻 Desarrolladores buscando su próximo reto</li>
                 <li>🏢 Reclutadores que quieren entender el mercado</li>
                 <li>🎓 Bootcamps y academias que orientan a sus alumnos</li>
             </ul>
+            <p>Si trabajas en tecnología, DevEmpleo es tu radar diario.</p>
         </section>
 
-        <section>
+        <section class="card">
             <h2>¿Qué incluye?</h2>
             <ul>
                 <li>📊 Dashboard con filtros por stack, provincia, modalidad y contrato</li>
                 <li>📥 Exportación a Excel</li>
                 <li>📈 Estadísticas por ubicación y tecnología</li>
                 <li>📬 Alertas personalizadas (próximamente)</li>
+                <li>🔌 API para empresas (en desarrollo)</li>
             </ul>
-        </section>
-
-        <section id="formulario">
-            <h2>Solicita acceso profesional</h2>
-            <p>¿Quieres utilizar DevEmpleo en tu empresa, academia o equipo de reclutamiento? Rellena el siguiente
-                formulario y te contactaremos para activar tu acceso.</p>
-
-            <!-- Formulario embebido de Google Forms -->
-            <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLScOSPpOUlgxqc6ggfzyHM3YHYiWhXMve1hfF1AQF3qV_O26Gw/viewform?embedded=true"
-                width="640" height="896" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-
         </section>
     </main>
 
     <footer>
-        © 2025 DevEmpleo · Creado por Paco desde Málaga · contacto@devempleo.es
+        © 2025 DevEmpleo · Hecho con 💻 desde Málaga · contacto@devempleo.es
     </footer>
-
 </body>
 
 </html>

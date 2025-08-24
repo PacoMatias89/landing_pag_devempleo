@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Solicitar acceso profesional | DevEmpleo</title>
+    <meta name="description"
+        content="Solicita acceso profesional a DevEmpleo y obtén datos y herramientas exclusivas para tu empresa o academia.">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="./assets/favicon.ico?v=1" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navegación -->
+    <nav class="main-nav">
+        <a href="index.html" class="nav-logo">
+            <img src="assets/logo.svg" alt="DevEmpleo Logo" />
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pricing.html">Planes & Precios</a></li>
+        </ul>
+    </nav>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>Acceso Profesional</h1>
+        <p>Datos, tendencias y herramientas para que tu empresa o academia esté un paso por delante en el mercado
+            laboral IT.</p>
+    </header>
+
+    <main>
+        <!-- Beneficios -->
+        <section class="card">
+            <h2>Beneficios para tu organización</h2>
+            <ul>
+                <li>📊 Estadísticas personalizadas por sector y tecnología</li>
+                <li>🔍 Acceso a nuestra base de datos con filtros avanzados</li>
+                <li>📥 Exportación de datos en Excel y API</li>
+                <li>📈 Informes semanales de tendencias</li>
+            </ul>
+        </section>
+
+        <!-- Formulario -->
+        <section id="formulario" class="card">
+            <h2>Solicita tu acceso</h2>
+            <p>Completa este formulario y te responderemos en menos de 24 horas.</p>
+
+            <form action="https://formspree.io/f/xovnalbe" method="POST" class="lead-form">
+                <div class="form-group">
+                    <label for="empresa">Nombre de la empresa</label>
+                    <input type="text" id="empresa" name="empresa" placeholder="Ej. DevAcademy" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="sector">Sector</label>
+                    <input type="text" id="sector" name="sector" placeholder="Ej. Educación, Recursos Humanos" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="usuarios">Número de usuarios</label>
+                    <input type="number" id="usuarios" name="usuarios" placeholder="Ej. 5" min="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="funcionalidades">Funcionalidades de interés</label>
+                    <textarea id="funcionalidades" name="funcionalidades"
+                        placeholder="Ej. API, exportación Excel, informes..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico de contacto</label>
+                    <input type="email" id="email" name="email" placeholder="tu@empresa.com" required>
+                </div>
+
+                <button type="submit" class="cta">Enviar solicitud</button>
+            </form>
+
+            <p class="form-note">🔒 Tus datos se usarán únicamente para gestionar tu solicitud y no se compartirán con
+                terceros.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        © 2025 DevEmpleo · Hecho con 💻 desde Málaga · contacto@devempleo.es
+    </footer>
+</body>
+
+</html>
