@@ -90,15 +90,36 @@
 
     <!-- Script para redirección post-envío -->
     <script>
-        const form = document.getElementById('form-acceso');
+        const form = document.querySelector('.lead-form');
 
-        form.addEventListener('submit', function () {
-            // Redirige tras un pequeño retraso para asegurar que Formspree procese el envío
-            setTimeout(() => {
-                window.location.href = 'thankyou.html';
-            }, 500);
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+            const sheetURL = 'https://script.google.com/macros/s/AKfycbzUtvFE0wAoCeLClYlIHrYIYqdCKh7TPWG4QutTim5oKQOEODmGtvF-JWafwU3cKRfZ1Q/exec'; // tu URL de Apps Script
+
+            // Enviar a Formspree
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            });
+
+            // Enviar a Google Sheets
+            fetch(sheetURL, {
+                method: 'POST',
+                body: formData
+            })
+                .then(() => {
+                    window.location.href = 'thankyou.html';
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error al guardar en Google Sheets.');
+                });
         });
     </script>
+
 </body>
 
 </html>
