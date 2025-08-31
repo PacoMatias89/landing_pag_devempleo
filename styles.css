@@ -97,35 +97,66 @@ header.hero p {
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
-/* ===== Selector de idioma ===== */
-#lang-switcher {
-  appearance: none;
+/* ===== Selector de idioma personalizado ===== */
+.lang-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+#lang-toggle {
   background-color: var(--color-fondo-seccion);
   border: 1px solid var(--color-borde);
-  border-radius: 8px;
-  padding: 0.6rem 2.5rem 0.6rem 1rem;
+  border-radius: var(--radio-borde);
+  padding: 0.5rem 1rem;
   font-size: 1rem;
   font-family: var(--fuente-base);
   color: var(--color-texto);
   cursor: pointer;
-  position: relative;
-  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23212529' stroke-width='2' fill='none' fill-rule='evenodd'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 1rem center;
-  background-size: 12px 8px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-#lang-switcher:hover {
+#lang-toggle:hover {
   border-color: var(--color-acento);
   box-shadow: 0 0 0 3px rgba(32, 201, 151, 0.2);
 }
 
-#lang-switcher:focus {
-  outline: none;
-  border-color: var(--color-acento);
-  box-shadow: 0 0 0 3px rgba(32, 201, 151, 0.3);
+.lang-options {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background-color: var(--color-fondo-seccion);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  display: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  min-width: 160px;
 }
+
+.lang-options li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.lang-options li:hover {
+  background-color: var(--color-footer);
+}
+
+.lang-options img {
+  width: 20px;
+  height: 14px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
 
 
 /* ===== Secciones ===== */

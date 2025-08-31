@@ -110,7 +110,6 @@
         <p><a href="mailto:contacto@devempleo.es">📩 contacto@devempleo.es</a></p>
     </footer>
 
-    <!-- Script de traducción -->
     <script defer>
         const translations = {
             es: {
@@ -171,16 +170,33 @@
 
         // Aplicar idioma al cargar
         const savedLang = localStorage.getItem("lang") || "es";
-        document.getElementById("lang-switcher").value = savedLang;
         applyTranslations(savedLang);
 
-        // Cambiar idioma al seleccionar
-        document.getElementById("lang-switcher").addEventListener("change", function () {
-            const lang = this.value;
-            localStorage.setItem("lang", lang);
-            applyTranslations(lang);
+        // Activar selector personalizado
+        const langToggle = document.getElementById("lang-toggle");
+        const langOptions = document.querySelector(".lang-options");
+
+        langToggle.addEventListener("click", () => {
+            langOptions.style.display = langOptions.style.display === "block" ? "none" : "block";
         });
 
+        document.querySelectorAll(".lang-options li").forEach(item => {
+            item.addEventListener("click", () => {
+                const lang = item.getAttribute("data-lang");
+                localStorage.setItem("lang", lang);
+                applyTranslations(lang);
+                langOptions.style.display = "none";
+            });
+        });
+
+        // Cerrar menú si se hace clic fuera
+        document.addEventListener("click", (e) => {
+            if (!e.target.closest(".lang-dropdown")) {
+                langOptions.style.display = "none";
+            }
+        });
+
+        // Aplicar traducciones
         function applyTranslations(lang) {
             if (!translations[lang]) return;
             document.querySelectorAll("[data-key]").forEach(el => {
@@ -200,6 +216,7 @@
             };
         })();
     </script>
+
 
 </body>
 
