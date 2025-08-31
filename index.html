@@ -26,10 +26,18 @@
             <li><a href="#funcionalidades" data-key="menu-funcionalidades">Funcionalidades</a></li>
             <li><a href="#contacto" data-key="menu-contacto">Contacto</a></li>
         </ul>
-        <select id="lang-switcher">
-            <option value="es">🇪🇸 Español</option>
-            <option value="en">🇬🇧 English</option>
-        </select>
+        <div class="lang-dropdown">
+            <button id="lang-toggle">🌐 Idioma</button>
+            <ul class="lang-options">
+                <li data-lang="es">
+                    <img src="assets/spain.png" alt="Español" /> Español
+                </li>
+                <li data-lang="en">
+                    <img src="assets/united-kingdom.png" alt="English" /> English
+                </li>
+            </ul>
+        </div>
+
     </nav>
 
     <!-- Hero -->
@@ -103,7 +111,7 @@
     </footer>
 
     <!-- Script de traducción -->
-    <script>
+    <script defer>
         const translations = {
             es: {
                 "menu-que-es": "Qué es",
@@ -161,8 +169,19 @@
             }
         };
 
+        // Aplicar idioma al cargar
+        const savedLang = localStorage.getItem("lang") || "es";
+        document.getElementById("lang-switcher").value = savedLang;
+        applyTranslations(savedLang);
+
+        // Cambiar idioma al seleccionar
         document.getElementById("lang-switcher").addEventListener("change", function () {
             const lang = this.value;
+            localStorage.setItem("lang", lang);
+            applyTranslations(lang);
+        });
+
+        function applyTranslations(lang) {
             if (!translations[lang]) return;
             document.querySelectorAll("[data-key]").forEach(el => {
                 const key = el.getAttribute("data-key");
@@ -170,7 +189,7 @@
                     el.textContent = translations[lang][key];
                 }
             });
-        });
+        }
 
         // Seguridad: evitar impresión accidental de HTML en consola
         (function () {
@@ -181,6 +200,7 @@
             };
         })();
     </script>
+
 </body>
 
 </html>

@@ -99,27 +99,34 @@ header.hero p {
 }
 /* ===== Selector de idioma ===== */
 #lang-switcher {
-  background-color: var(--color-fondo);
+  appearance: none;
+  background-color: var(--color-fondo-seccion);
   border: 1px solid var(--color-borde);
-  border-radius: var(--radio-borde);
-  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  padding: 0.6rem 2.5rem 0.6rem 1rem;
   font-size: 1rem;
   font-family: var(--fuente-base);
   color: var(--color-texto);
   cursor: pointer;
+  position: relative;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23212529' stroke-width='2' fill='none' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 12px 8px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 #lang-switcher:hover {
-  border-color: var(--color-principal);
-  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.2);
+  border-color: var(--color-acento);
+  box-shadow: 0 0 0 3px rgba(32, 201, 151, 0.2);
 }
 
 #lang-switcher:focus {
   outline: none;
-  border-color: var(--color-principal);
-  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.3);
+  border-color: var(--color-acento);
+  box-shadow: 0 0 0 3px rgba(32, 201, 151, 0.3);
 }
+
 
 /* ===== Secciones ===== */
 main {
