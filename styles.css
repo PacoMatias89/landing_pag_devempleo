@@ -97,6 +97,29 @@ header.hero p {
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.25);
 }
+/* ===== Selector de idioma ===== */
+#lang-switcher {
+  background-color: var(--color-fondo);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-family: var(--fuente-base);
+  color: var(--color-texto);
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#lang-switcher:hover {
+  border-color: var(--color-principal);
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.2);
+}
+
+#lang-switcher:focus {
+  outline: none;
+  border-color: var(--color-principal);
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.3);
+}
 
 /* ===== Secciones ===== */
 main {
