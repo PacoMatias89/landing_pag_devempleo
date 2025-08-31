@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DevEmpleo · Encuentra tu próximo trabajo IT en España</title>
+    <title>DevEmpleo · Dashboard gratuito de empleo IT en España</title>
     <meta name="description"
-        content="DevEmpleo recopila miles de ofertas tecnológicas y las presenta en un dashboard interactivo con filtros y estadísticas." />
+        content="Consulta ofertas de empleo IT en España. Dashboard gratuito con filtros, estadísticas y exportación a Excel. Datos actualizados a diario de fuentes públicas." />
+    <meta name="keywords"
+        content="empleo IT España, trabajo programador, ofertas desarrollador, trabajo remoto, empleo tecnología, dashboard empleo gratis" />
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="./assets/favicon.ico?v=1" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -16,59 +18,62 @@
     <!-- Navegación -->
     <nav class="main-nav">
         <a href="index.html" class="nav-logo">
-            <img src="assets/logo.svg" alt="DevEmpleo Logo" />
+            <img src="assets/logo.svg" alt="DevEmpleo - Dashboard de empleo IT en España" />
         </a>
         <ul class="nav-links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="pricing.html">Planes & Precios</a></li>
+            <li><a href="#que-es">Qué es</a></li>
+            <li><a href="#funcionalidades">Funcionalidades</a></li>
+            <li><a href="#contacto">Contacto</a></li>
         </ul>
     </nav>
 
     <!-- Hero -->
-    <header>
-        <h1>Más de 11.000 ofertas analizadas. Cada día. Sin ruido.</h1>
-        <p>Encuentra tu próximo trabajo IT en España con filtros por stack, ubicación y modalidad.</p>
-        <div class="cta-group">
-            <a href="https://devempleo.streamlit.app/">
-                <button class="cta">Acceder al dashboard</button>
-            </a>
-            <a href="pricing.html">
-                <button class="cta secondary">Ver planes y precios</button>
-            </a>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>📊 Dashboard gratuito de empleo IT en España</h1>
+            <p>Consulta y filtra ofertas de trabajo en tecnología, con datos de múltiples fuentes públicas, actualizados
+                a diario.</p>
+            <a href="https://devempleo.streamlit.app/" class="btn-primary">Acceder al dashboard</a>
+            <p class="gratis">💡 Acceso libre · Sin registro · Datos públicos</p>
         </div>
     </header>
 
     <main>
-        <section class="card">
-            <h2>¿Qué es DevEmpleo?</h2>
-            <p>DevEmpleo analiza miles de ofertas IT en España y te muestra solo lo que importa. Filtrado por stack,
-                ubicación, modalidad y más.</p>
+        <!-- Sección Qué es -->
+        <section id="que-es" class="card">
+            <h2>ℹ️ Qué es DevEmpleo</h2>
+            <p>DevEmpleo es una herramienta gratuita que recopila y organiza ofertas de empleo IT en España desde
+                múltiples fuentes públicas. Permite filtrar resultados, exportar datos y visualizar estadísticas del
+                mercado laboral tecnológico.</p>
         </section>
 
-        <section class="card">
-            <h2>¿Para quién es?</h2>
+        <!-- Sección Funcionalidades -->
+        <section id="funcionalidades" class="card">
+            <h2>🔍 Funcionalidades principales</h2>
             <ul>
-                <li>👨‍💻 Desarrolladores buscando su próximo reto</li>
-                <li>🏢 Reclutadores que quieren entender el mercado</li>
-                <li>🎓 Bootcamps y academias que orientan a sus alumnos</li>
+                <li>Filtros por título, ubicación, fuente, modalidad y contrato</li>
+                <li>Exportación de resultados a Excel</li>
+                <li>Estadísticas por ubicación y tecnología</li>
+                <li>Datos de múltiples portales de empleo</li>
+                <li>Actualización diaria</li>
             </ul>
-            <p>Si trabajas en tecnología, DevEmpleo es tu radar diario.</p>
         </section>
 
+        <!-- Sección A quién puede interesar -->
         <section class="card">
-            <h2>¿Qué incluye?</h2>
+            <h2>👥 A quién puede interesar</h2>
             <ul>
-                <li>📊 Dashboard con filtros por stack, provincia, modalidad y contrato</li>
-                <li>📥 Exportación a Excel</li>
-                <li>📈 Estadísticas por ubicación y tecnología</li>
-                <li>📬 Alertas personalizadas (próximamente)</li>
-                <li>🔌 API para empresas (en desarrollo)</li>
+                <li>Profesionales IT buscando nuevas oportunidades</li>
+                <li>Reclutadores que analizan tendencias del mercado</li>
+                <li>Centros de formación que orientan a sus estudiantes</li>
             </ul>
         </section>
     </main>
 
-    <footer>
-        © 2025 DevEmpleo · Hecho con 💻 desde Málaga · contacto@devempleo.es
+    <!-- Footer / Contacto -->
+    <footer id="contacto">
+        <p>© 2025 DevEmpleo · Datos de fuentes públicas</p>
+        <p><a href="mailto:contacto@devempleo.es">📩 contacto@devempleo.es</a></p>
     </footer>
 </body>
 
