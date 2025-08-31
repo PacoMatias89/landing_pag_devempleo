@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DevEmpleo · Dashboard gratuito de empleo IT en España</title>
+    <title>DevEmpleo · Dashboard gratuito de empleo IT en España y en todo el mundo</title>
     <meta name="description"
-        content="Consulta ofertas de empleo IT en España. Dashboard gratuito con filtros, estadísticas y exportación a Excel. Datos actualizados a diario desde Jooble, Adzuna y Remotive." />
+        content="Consulta ofertas de empleo IT en España y en todo el mundo. Dashboard gratuito con filtros, estadísticas y exportación a Excel. Datos actualizados a diario desde Jooble, Adzuna y Remotive." />
     <meta name="keywords"
-        content="empleo IT España, trabajo programador, ofertas desarrollador, trabajo remoto, empleo tecnología, dashboard empleo gratis, Jooble, Adzuna, Remotive" />
+        content="empleo IT España, trabajo programador, ofertas desarrollador, trabajo remoto, empleo tecnología, dashboard empleo gratis, remote jobs, IT jobs worldwide, Jooble, Adzuna, Remotive" />
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="./assets/favicon.ico?v=1" type="image/x-icon" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -18,68 +18,80 @@
     <!-- Navegación -->
     <nav class="main-nav">
         <a href="index.html" class="nav-logo">
-            <img src="assets/logo.svg" alt="DevEmpleo - Dashboard de empleo IT en España" />
+            <img src="assets/logo.svg" alt="DevEmpleo Logo" />
         </a>
         <ul class="nav-links">
-            <li><a href="#que-es">Qué es</a></li>
-            <li><a href="#fuentes">Fuentes de datos</a></li>
-            <li><a href="#funcionalidades">Funcionalidades</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#que-es" data-key="menu-que-es">Qué es</a></li>
+            <li><a href="#fuentes" data-key="menu-fuentes">Fuentes de datos</a></li>
+            <li><a href="#funcionalidades" data-key="menu-funcionalidades">Funcionalidades</a></li>
+            <li><a href="#contacto" data-key="menu-contacto">Contacto</a></li>
         </ul>
+        <select id="lang-switcher">
+            <option value="es">🇪🇸 Español</option>
+            <option value="en">🇬🇧 English</option>
+        </select>
     </nav>
 
     <!-- Hero -->
     <header class="hero">
         <div class="hero-content">
-            <h1>📊 Dashboard gratuito de empleo IT en España</h1>
-            <p>Consulta y filtra ofertas de trabajo en tecnología, con datos de múltiples fuentes públicas, actualizados
-                a diario.</p>
-            <a href="https://devempleo.streamlit.app/" class="btn-primary">Acceder al dashboard</a>
-            <p class="gratis">💡 Acceso libre · Sin registro · Datos públicos</p>
+            <h1 id="hero-title" data-key="hero-title">🌍 Dashboard gratuito de empleo IT en España y en todo el mundo
+            </h1>
+            <p id="hero-subtitle" data-key="hero-subtitle">Consulta y filtra ofertas de trabajo en tecnología, tanto
+                locales como internacionales, con datos de múltiples fuentes públicas actualizados a diario.</p>
+            <a href="https://devempleo.streamlit.app/" id="btn-dashboard" class="btn-primary"
+                data-key="btn-dashboard">Acceder al dashboard</a>
+            <p class="gratis">💡 Acceso libre · Sin registro · Datos públicos globales</p>
         </div>
     </header>
 
     <main>
         <!-- Sección Qué es -->
         <section id="que-es" class="card">
-            <h2>ℹ️ Qué es DevEmpleo</h2>
-            <p>DevEmpleo es una herramienta gratuita que recopila y organiza ofertas de empleo IT en España y remoto.
-                Los datos se obtienen automáticamente cada día y se presentan en un dashboard interactivo con filtros y
-                estadísticas.</p>
+            <h2 data-key="section-que-es-title">ℹ️ Qué es DevEmpleo</h2>
+            <p data-key="section-que-es-text">DevEmpleo es una herramienta gratuita que recopila y organiza ofertas de
+                empleo IT en España y en todo el mundo. Los datos se obtienen automáticamente cada día y se presentan en
+                un dashboard interactivo con filtros y estadísticas.</p>
         </section>
 
         <!-- Sección Fuentes -->
         <section id="fuentes" class="card">
-            <h2>🌐 Fuentes de datos</h2>
-            <p>La información se recopila de forma automática desde:</p>
+            <h2 data-key="section-fuentes-title">🌐 Fuentes de datos</h2>
+            <p data-key="section-fuentes-text">La información se recopila de forma automática desde:</p>
             <ul>
-                <li><strong>Jooble</strong>: Ofertas de empleo en España y remoto</li>
-                <li><strong>Adzuna</strong>: Ofertas filtradas por provincia y palabra clave</li>
-                <li><strong>Remotive</strong>: Ofertas globales de trabajo remoto en tecnología</li>
+                <li data-key="fuente-jooble"><strong>Jooble</strong>: Ofertas de empleo en España y en múltiples países
+                </li>
+                <li data-key="fuente-adzuna"><strong>Adzuna</strong>: Ofertas filtradas por provincia en España y por
+                    ubicación internacional</li>
+                <li data-key="fuente-remotive"><strong>Remotive</strong>: Ofertas globales de trabajo remoto en
+                    tecnología</li>
             </ul>
-            <p>Se utilizan múltiples palabras clave relacionadas con programación, diseño, datos, ciberseguridad y
-                gestión de producto, así como todas las provincias de España.</p>
+            <p data-key="section-fuentes-extra">Se utilizan múltiples palabras clave relacionadas con programación,
+                diseño, datos, ciberseguridad y gestión de producto, así como todas las provincias de España y
+                categorías internacionales.</p>
         </section>
 
         <!-- Sección Funcionalidades -->
         <section id="funcionalidades" class="card">
-            <h2>🔍 Funcionalidades principales</h2>
+            <h2 data-key="section-funcionalidades-title">🔍 Funcionalidades principales</h2>
             <ul>
-                <li>Filtros por título, ubicación, fuente, modalidad y contrato</li>
-                <li>Exportación de resultados a Excel</li>
-                <li>Estadísticas por ubicación y tecnología</li>
-                <li>Datos de múltiples portales de empleo</li>
-                <li>Actualización diaria automática</li>
+                <li data-key="func-1">Filtros por título, ubicación (España o internacional), fuente, modalidad y
+                    contrato</li>
+                <li data-key="func-2">Exportación de resultados a Excel</li>
+                <li data-key="func-3">Estadísticas por ubicación y tecnología</li>
+                <li data-key="func-4">Datos de múltiples portales de empleo</li>
+                <li data-key="func-5">Actualización diaria automática</li>
             </ul>
         </section>
 
         <!-- Sección A quién puede interesar -->
         <section class="card">
-            <h2>👥 A quién puede interesar</h2>
+            <h2 data-key="section-interesa-title">👥 A quién puede interesar</h2>
             <ul>
-                <li>Profesionales IT buscando nuevas oportunidades</li>
-                <li>Reclutadores que analizan tendencias del mercado</li>
-                <li>Centros de formación que orientan a sus estudiantes</li>
+                <li data-key="interesa-1">Profesionales IT buscando oportunidades en España o en el extranjero</li>
+                <li data-key="interesa-2">Reclutadores que analizan tendencias del mercado global</li>
+                <li data-key="interesa-3">Centros de formación que orientan a sus estudiantes hacia el mercado local e
+                    internacional</li>
             </ul>
         </section>
     </main>
@@ -89,6 +101,86 @@
         <p>© 2025 DevEmpleo · Datos obtenidos de Jooble, Adzuna y Remotive</p>
         <p><a href="mailto:contacto@devempleo.es">📩 contacto@devempleo.es</a></p>
     </footer>
+
+    <!-- Script de traducción -->
+    <script>
+        const translations = {
+            es: {
+                "menu-que-es": "Qué es",
+                "menu-fuentes": "Fuentes de datos",
+                "menu-funcionalidades": "Funcionalidades",
+                "menu-contacto": "Contacto",
+                "hero-title": "🌍 Dashboard gratuito de empleo IT en España y en todo el mundo",
+                "hero-subtitle": "Consulta y filtra ofertas de trabajo en tecnología, tanto locales como internacionales, con datos de múltiples fuentes públicas actualizados a diario.",
+                "btn-dashboard": "Acceder al dashboard",
+                "section-que-es-title": "ℹ️ Qué es DevEmpleo",
+                "section-que-es-text": "DevEmpleo es una herramienta gratuita que recopila y organiza ofertas de empleo IT en España y en todo el mundo. Los datos se obtienen automáticamente cada día y se presentan en un dashboard interactivo con filtros y estadísticas.",
+                "section-fuentes-title": "🌐 Fuentes de datos",
+                "section-fuentes-text": "La información se recopila de forma automática desde:",
+                "fuente-jooble": "Jooble: Ofertas de empleo en España y en múltiples países",
+                "fuente-adzuna": "Adzuna: Ofertas filtradas por provincia en España y por ubicación internacional",
+                "fuente-remotive": "Remotive: Ofertas globales de trabajo remoto en tecnología",
+                "section-fuentes-extra": "Se utilizan múltiples palabras clave relacionadas con programación, diseño, datos, ciberseguridad y gestión de producto, así como todas las provincias de España y categorías internacionales.",
+                "section-funcionalidades-title": "🔍 Funcionalidades principales",
+                "func-1": "Filtros por título, ubicación (España o internacional), fuente, modalidad y contrato",
+                "func-2": "Exportación de resultados a Excel",
+                "func-3": "Estadísticas por ubicación y tecnología",
+                "func-4": "Datos de múltiples portales de empleo",
+                "func-5": "Actualización diaria automática",
+                "section-interesa-title": "👥 A quién puede interesar",
+                "interesa-1": "Profesionales IT buscando oportunidades en España o en el extranjero",
+                "interesa-2": "Reclutadores que analizan tendencias del mercado global",
+                "interesa-3": "Centros de formación que orientan a sus estudiantes hacia el mercado local e internacional"
+            },
+            en: {
+                "menu-que-es": "What is it",
+                "menu-fuentes": "Data sources",
+                "menu-funcionalidades": "Features",
+                "menu-contacto": "Contact",
+                "hero-title": "🌍 Free IT Job Dashboard for Spain and Worldwide",
+                "hero-subtitle": "Browse and filter tech job offers, both local and international, with daily updated public data from multiple sources.",
+                "btn-dashboard": "Access the dashboard",
+                "section-que-es-title": "ℹ️ What is DevEmpleo",
+                "section-que-es-text": "DevEmpleo is a free tool that collects and organizes IT job offers in Spain and worldwide. Data is automatically updated daily and presented in an interactive dashboard with filters and statistics.",
+                "section-fuentes-title": "🌐 Data sources",
+                "section-fuentes-text": "Information is automatically collected from:",
+                "fuente-jooble": "Jooble: Job offers in Spain and multiple countries",
+                "fuente-adzuna": "Adzuna: Offers filtered by province in Spain and by international location",
+                "fuente-remotive": "Remotive: Global remote tech job offers",
+                "section-fuentes-extra": "Multiple keywords related to programming, design, data, cybersecurity, and product management are used, as well as all provinces of Spain and international categories.",
+                "section-funcionalidades-title": "🔍 Main features",
+                "func-1": "Filters by title, location (Spain or international), source, modality, and contract",
+                "func-2": "Export results to Excel",
+                "func-3": "Statistics by location and technology",
+                "func-4": "Data from multiple job portals",
+                "func-5": "Automatic daily update",
+                "section-interesa-title": "👥 Who might be interested",
+                "interesa-1": "IT professionals seeking opportunities in Spain or abroad",
+                "interesa-2": "Recruiters analyzing global market trends",
+                "interesa-3": "Training centers guiding students towards local and international markets"
+            }
+        };
+
+        document.getElementById("lang-switcher").addEventListener("change", function () {
+            const lang = this.value;
+            if (!translations[lang]) return;
+            document.querySelectorAll("[data-key]").forEach(el => {
+                const key = el.getAttribute("data-key");
+                if (translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+        });
+
+        // Seguridad: evitar impresión accidental de HTML en consola
+        (function () {
+            const originalLog = console.log;
+            console.log = function (...args) {
+                if (args.some(arg => arg instanceof HTMLElement)) return;
+                originalLog.apply(console, args);
+            };
+        })();
+    </script>
 </body>
 
 </html>
